@@ -1,0 +1,80 @@
+<nav class="navbar bg-primary mb-4">
+  <div class="text-white d-flex">
+    <a href="#" class="text-white" routerLink="/home"
+      ><i class="bi bi-chevron-left ms-1" style="font-size: 20px"></i
+    ></a>
+    <h5 class="text-center ms-5 mt-1">Help & Support</h5>
+  </div>
+</nav>
+
+<div class="container py-5">
+  <div class="text-center mb-4">
+    <h2 class="fw-bold">Need Help?</h2>
+    <p class="text-muted">We're here to support you 24/7</p>
+  </div>
+
+  <div class="row g-4">
+    <!-- FAQ -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm rounded-4 border-0">
+        <div class="card-body text-center">
+          <i class="bi bi-question-circle-fill display-4 text-primary mb-3"></i>
+          <h5 class="card-title">FAQs</h5>
+          <p class="card-text">
+            Find answers to commonly asked questions about bookings,
+            cancellations, and payments.
+          </p>
+          <a
+            href="#"
+            routerLink="/account"
+            class="btn btn-outline-primary btn-sm mt-2"
+            >View FAQs</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Chat -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm rounded-4 border-0">
+        <div class="card-body text-center">
+          <i class="bi bi-chat-dots-fill display-4 text-success mb-3"></i>
+          <h5 class="card-title">Live Chat</h5>
+          <p class="card-text">
+            Talk to our support team in real-time for quick solutions to your
+            queries.
+          </p>
+          <a
+            href="#"
+            routerLink="/account"
+            class="btn btn-outline-success btn-sm mt-2"
+            >Start Chat</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm rounded-4 border-0">
+        <div class="card-body text-center">
+          <i class="bi bi-envelope-fill display-4 text-danger mb-3"></i>
+          <h5 class="card-title">Email Support</h5>
+          <p class="card-text">
+            Send us a message and we'll get back to you within 24 hours.
+          </p>
+          <a
+            href="#"
+            routerLink="/account"
+            class="btn btn-outline-danger btn-sm mt-2"
+            >Send Email</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br />
+
+<app-footer class="fixed-bottom"></app-footer>

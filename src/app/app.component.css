@@ -1,0 +1,18 @@
+
+
+.zoom-in-once {
+display: inline-block;
+font-size: 24px;
+font-weight: bold;
+animation: zoomOnly 3s forwards;
+}
+
+@keyframes zoomOnly {
+from {
+  transform: scale(1);
+}
+to {
+  transform: scale(3);
+}
+}
+

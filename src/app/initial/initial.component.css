@@ -1,0 +1,14 @@
+
+
+#bus {
+  animation: zoomOnly 3s forwards;
+}
+
+@keyframes zoomOnly {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(2);
+  }
+}

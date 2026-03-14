@@ -1,0 +1,459 @@
+<style>
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .parent-Seats {
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .border {
+    background-color: white;
+    border-color: #c0bbbb;
+    border-radius: 10px;
+  }
+
+  .image-wrapper {
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .red-filter img {
+    filter: brightness(0) saturate(100%) invert(17%) sepia(93%) saturate(7484%)
+      hue-rotate(357deg) brightness(89%) contrast(114%);
+  }
+
+  /* sweet Alert button gap */
+  ::ng-deep .swal-buttons-gap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding-top: 10px;
+  }
+
+  ::ng-deep .swal2-actions .btn {
+    min-width: 120px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+</style>
+
+<nav
+  class="navbar navbar-dark bg-primary p-2 d-flex justify-content-between align-items-center"
+>
+  <a href="#" style="color: white" routerLink="/home"
+    ><i
+      class="bi bi-arrow-left ms-1 justify-content-end"
+      style="font-size: 25px"
+    ></i>
+  </a>
+  <button class="text-white btn btn-primary text-end" (click)="showForm()">
+    NEXT
+  </button>
+</nav>
+
+<!-- Seat -->
+<div *ngIf="seat" class="parent-Seats p-4" style="margin-top: -16px">
+  <div class="border border-2 border-primary">
+    <div class="row d-flex justify-content-between align-items-center p-2">
+      <div
+        class="col-3 image-wrapper"
+        [class.red-filter]="isRed1"
+        (click)="isToggle()"
+      >
+        <img
+          src="assets/img/armchair.png"
+          alt="seat"
+          class="w-75"
+          style="transform: rotate(180deg)"
+        />
+      </div>
+
+      <div
+        class="col-8 image-wrapper text-end"
+        [class.red-filter]="isRed11"
+        (click)="isToggle11()"
+      >
+        <img
+          src="assets/img/armchair.png"
+          alt="seat"
+          class="w-25 me-3"
+          style="transform: rotate(180deg)"
+        />
+        <img
+          src="assets/img/armchair.png"
+          alt="seat"
+          class="w-25"
+          style="transform: rotate(180deg)"
+        />
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-between align-items-center p-2">
+      <div
+        class="col-3 image-wrapper"
+        [class.red-filter]="isRed2"
+        (click)="isToggle2()"
+      >
+        <img
+          src="assets/img/armchair.png"
+          alt="seat"
+          class="w-75"
+          style="transform: rotate(180deg)"
+        />
+      </div>
+      <div
+        class="col-8 text-end image-wrapper"
+        [class.red-filter]="isRed12"
+        (click)="isToggle12()"
+      >
+        <img
+          src="assets/img/armchair.png"
+          alt="seat"
+          class="w-25 me-3"
+          style="transform: rotate(180deg)"
+        />
+        <img
+          src="assets/img/armchair.png"
+          alt="seat"
+          class="w-25"
+          style="transform: rotate(180deg)"
+        />
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-between align-items-center p-2">
+      <div
+        class="col-3 image-wrapper"
+        [class.red-filter]="isRed3"
+        (click)="isToggle3()"
+      >
+        <img
+          src="assets/img/armchair.png"
+          alt="seat"
+          class="w-75"
+          style="transform: rotate(180deg)"
+        />
+      </div>
+      <div
+        class="col-8 text-end image-wrapper"
+        [class.red-filter]="isRed13"
+        (click)="isToggle13()"
+      >
+        <img
+          src="assets/img/armchair.png"
+          alt="seat"
+          class="w-25 me-3"
+          style="transform: rotate(180deg)"
+        />
+        <img
+          src="assets/img/armchair.png"
+          alt="seat"
+          class="w-25"
+          style="transform: rotate(180deg)"
+        />
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-between align-items-center p-2">
+      <div
+        class="col-3 image-wrapper"
+        [class.red-filter]="isRed4"
+        (click)="isToggle4()"
+      >
+        <img
+          src="assets/img/armchair.png"
+          alt="seat"
+          class="w-75"
+          style="transform: rotate(180deg)"
+        />
+      </div>
+      <div
+        class="col-8 text-end image-wrapper"
+        [class.red-filter]="isRed14"
+        (click)="isToggle14()"
+      >
+        <img
+          src="assets/img/armchair.png"
+          alt="seat"
+          class="w-25 me-3"
+          style="transform: rotate(180deg)"
+        />
+        <img
+          src="assets/img/armchair.png"
+          alt="seat"
+          class="w-25"
+          style="transform: rotate(180deg)"
+        />
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-between align-items-center p-2">
+      <div
+        class="col-3 image-wrapper"
+        [class.red-filter]="isRed5"
+        (click)="isToggle5()"
+      >
+        <img
+          src="assets/img/armchair.png"
+          alt="seat"
+          class="w-75"
+          style="transform: rotate(180deg)"
+        />
+      </div>
+      <div
+        class="col-8 text-end image-wrapper"
+        [class.red-filter]="isRed15"
+        (click)="isToggle15()"
+      >
+        <img
+          src="assets/img/armchair.png"
+          alt="seat"
+          class="w-25 me-3"
+          style="transform: rotate(180deg)"
+        />
+        <img
+          src="assets/img/armchair.png"
+          alt="seat"
+          class="w-25"
+          style="transform: rotate(180deg)"
+        />
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-between align-items-center p-2">
+      <div
+        class="col-3 image-wrapper"
+        [class.red-filter]="isRed6"
+        (click)="isToggle6()"
+      >
+        <img
+          src="assets/img/armchair.png"
+          alt="seat"
+          class="w-75"
+          style="transform: rotate(180deg)"
+        />
+      </div>
+      <div
+        class="col-8 text-end image-wrapper"
+        [class.red-filter]="isRed16"
+        (click)="isToggle16()"
+      >
+        <img
+          src="assets/img/armchair.png"
+          alt="seat"
+          class="w-25 me-3"
+          style="transform: rotate(180deg)"
+        />
+        <img
+          src="assets/img/armchair.png"
+          alt="seat"
+          class="w-25"
+          style="transform: rotate(180deg)"
+        />
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-between align-items-center p-2">
+      <div
+        class="col-3 image-wrapper"
+        [class.red-filter]="isRed7"
+        (click)="isToggle7()"
+      >
+        <img
+          src="assets/img/armchair.png"
+          alt="seat"
+          class="w-75"
+          style="transform: rotate(180deg)"
+        />
+      </div>
+      <div
+        class="col-8 text-end image-wrapper"
+        [class.red-filter]="isRed17"
+        (click)="isToggle17()"
+      >
+        <img
+          src="assets/img/armchair.png"
+          alt="seat"
+          class="w-25 me-3"
+          style="transform: rotate(180deg)"
+        />
+        <img
+          src="assets/img/armchair.png"
+          alt="seat"
+          class="w-25"
+          style="transform: rotate(180deg)"
+        />
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-between align-items-center p-2">
+      <div
+        class="col-3 image-wrapper"
+        [class.red-filter]="isRed8"
+        (click)="isToggle8()"
+      >
+        <img
+          src="assets/img/armchair.png"
+          alt="seat"
+          class="w-75"
+          style="transform: rotate(180deg)"
+        />
+      </div>
+      <div
+        class="col-8 text-end image-wrapper"
+        [class.red-filter]="isRed18"
+        (click)="isToggle18()"
+      >
+        <img
+          src="assets/img/armchair.png"
+          alt="seat"
+          class="w-25 me-3"
+          style="transform: rotate(180deg)"
+        />
+        <img
+          src="assets/img/armchair.png"
+          alt="seat"
+          class="w-25"
+          style="transform: rotate(180deg)"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- form -->
+<div
+  *ngIf="form"
+  class="container w-100vh h-100 bg-light p-4 rounded shadow"
+  style="margin-top: 25px !important"
+>
+  <h2 class="text-center text-uppercase bg-primary text-white">
+    Pessanger Details
+  </h2>
+  <div>
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        placeholder="Enter your name"
+        autocomplete="off"
+        [(ngModel)]="name"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        placeholder="Enter your email"
+        autocomplete="off"
+        [(ngModel)]="email"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="age" class="form-label">Age</label>
+      <input
+        type="number"
+        class="form-control"
+        id="age"
+        placeholder="Enter your age"
+        autocomplete="off"
+        [(ngModel)]="age"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="dropdown1" class="form-label">Proof</label>
+      <select class="form-select" id="dropdown1" [(ngModel)]="proof">
+        <option value="" selected disabled>Select an option</option>
+        <option value="Aadhar Id">Aadhar Id</option>
+        <option value="Pan card">Pan card</option>
+        <option value="Voter Id">Voter Id</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="dropdown2" class="form-label">Gender</label>
+      <select class="form-select" id="dropdown2" [(ngModel)]="gender">
+        <option value="" selected disabled>Select an option</option>
+        <option value="Male">Male</option>
+        <option value="Fe-Male">Fe-Male</option>
+      </select>
+    </div>
+    <div class="button text-end">
+      <button type="button" class="btn btn-danger text-end" (click)="backBtn()">
+        Back</button
+      >&nbsp;
+
+      <button
+        type="button"
+        class="btn btn-success text-end"
+        (click)="showFormDetails()"
+      >
+        Get Details
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- form details -->
+<div class="formdetail">
+  <div class="container mt-5" *ngIf="formDetails">
+    <div class="card shadow p-4 text-center">
+      <h3 class="mb-4 text-center text-uppercase bg-primary text-white">
+        Your Details
+      </h3>
+      <div class="row mb-3">
+        <div class="col-5 fw-bold">Name:</div>
+        <div class="col-3">{{ name }}</div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-5 fw-bold">Email:</div>
+        <div class="col-3">{{ email }}</div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-5 fw-bold">Age:</div>
+        <div class="col-3">{{ age }}</div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-5 fw-bold">Proof:</div>
+        <div class="col-3">{{ proof }}</div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-5 fw-bold">Gender:</div>
+        <div class="col-3">{{ gender }}</div>
+      </div>
+
+      <div class="button text-end">
+        <button class="btn btn-danger ms-5" (click)="yourDetails()">Back</button
+        >&nbsp;
+        <button class="btn btn-success" (click)="accessSweetAlert()">
+          Confirm
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

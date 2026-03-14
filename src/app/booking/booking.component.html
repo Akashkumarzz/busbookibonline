@@ -1,0 +1,138 @@
+<style>
+  * {
+    font-family: "Poppins", sans-serif;
+    font-weight: 450;
+    font-style: normal;
+  }
+
+  button {
+    height: 50px;
+    position: relative;
+    padding: 0 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 0;
+    box-shadow: hsl(210deg 87% 36%) 0px 7px 0px 0px;
+    background-color: hsl(210deg 100% 44%);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 31ms cubic-bezier(0.5, 0.7, 0.4, 1);
+  }
+
+  button:before {
+    content: attr(alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 4px;
+    opacity: 1;
+  }
+
+  button:active {
+    box-shadow: none;
+    transform: translateY(7px);
+    transition: 35ms cubic-bezier(0.5, 0.7, 0.4, 1);
+  }
+
+  button:hover:before {
+    transition: all 0s;
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  button i {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-style: normal;
+    transition: all 2s ease;
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  button:hover i {
+    transition: all 0.2s ease;
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  button:hover i:nth-child(1) {
+    transition-delay: 0.045s;
+  }
+
+  button:hover i:nth-child(2) {
+    transition-delay: calc(0.045s * 3);
+  }
+
+  button:hover i:nth-child(3) {
+    transition-delay: calc(0.045s * 4);
+  }
+
+  button:hover i:nth-child(4) {
+    transition-delay: calc(0.045s * 5);
+  }
+
+  button:hover i:nth-child(6) {
+    transition-delay: calc(0.045s * 6);
+  }
+
+  button:hover i:nth-child(7) {
+    transition-delay: calc(0.045s * 7);
+  }
+
+  button:hover i:nth-child(8) {
+    transition-delay: calc(0.045s * 8);
+  }
+
+  button:hover i:nth-child(9) {
+    transition-delay: calc(0.045s * 9);
+  }
+
+  button:hover i:nth-child(10) {
+    transition-delay: calc(0.045s * 10);
+  }
+</style>
+
+<nav class="navbar bg-primary mb-0">
+  <div class="text-white d-flex">
+    <a href="#" class="text-white" routerLink="/home"
+      ><i class="bi bi-chevron-left ms-1" style="font-size: 20px"></i
+    ></a>
+    <h5 class="text-center ms-5 mt-1">Booking</h5>
+  </div>
+</nav>
+
+<div class="img">
+  <img
+    src="assets/img/Ticket.svg"
+    alt="img"
+    class="img-fluid"
+  />
+</div>
+
+<div class="text-capitalize text-center">
+  <h6 class="fw-bold">No trips yet</h6>
+  <p>you have not booked any trips yet.plan your next journey today!</p>
+</div>
+
+<div class="button text-center">
+  <button alt="Book Now">
+    <i>B</i>
+    <i>o</i>
+    <i>o</i>
+    <i>k</i>
+    <i>&nbsp;</i>
+    <i>n</i>
+    <i>o</i>
+    <i>w</i>
+  </button>
+</div>
+<br /><br /><br />
+<br /><br />
+<app-footer class="fixed-bottom"></app-footer>

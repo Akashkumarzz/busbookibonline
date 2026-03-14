@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      #relative {
+        color: whitesmoke;
+        position: relative;
+      }
+
+      #obsolute {
+        position: absolute;
+        top: 3px;
+        left: -20px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      * {
+        font-family: "Poppins", sans-serif;
+        font-weight: 450;
+        font-style: normal;
+      }
+
+      .list-group li {
+        cursor: pointer;
+      }
+
+      .Details,
+      .language {
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent text-capitalize">
+      <div class="image" id="relative">
+        <img
+          src="assets/img/sunset.jpg"
+          alt="nature"
+          class="img-fluid"
+          style="width: 100%"
+        />
+
+        <!-- Text -->
+        <div class="text" id="obsolute">
+          <ul style="list-style-type: none">
+            <li style="font-weight: 600">Akash</li>
+            <li>7548875634</li>
+            <li>Member since Oct 2001</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- languages -->
+      <div class="languages text-center mb-2" style="margin-top: 20px">
+        <h5 class="language text-capitalize">try in your language</h5>
+      </div>
+
+      <!--language types -->
+      <div
+        id="languages"
+        class="types text-capitalize d-flex gap-3 justify-content-center mb-3"
+      >
+        <a href="#" style="text-decoration: none" routerLink="/account"
+          ><p class="card border-1 p-1 btn btn-outline-primary">english</p></a
+        >
+        <a href="#" style="text-decoration: none" routerLink="/account"
+          ><p class="card btn btn-outline-primary border-1 p-1">tamil</p></a
+        >
+        <a href="#" style="text-decoration: none" routerLink="/account"
+          ><p class="card btn btn-outline-primary border-1 p-1">telungu</p></a
+        >
+        <a href="#" style="text-decoration: none" routerLink="/account"
+          ><p class="card btn btn-outline-primary border-1 p-1">kannada</p></a
+        >
+        <a href="#" style="text-decoration: none" routerLink="/account"
+          ><p class="card btn btn-outline-primary border-1 p-1">hindi</p></a
+        >
+      </div>
+
+      <!--Efficients-->
+
+      <div class="Details mb-4">
+        <h5 class="Details ms-2">my Details</h5>
+      </div>
+      <div class="unorder mb-4">
+        <ul class="list-group">
+          <div>
+            <li class="list-group-item p-3">
+              <i class="bi bi-border-width fs-4"></i>&nbsp;&nbsp; &nbsp;bookings
+              <i
+                class="bi bi-chevron-right float-end"
+                id="icon"
+                style="font-size: 20px"
+              ></i>
+            </li>
+          </div>
+
+          <div>
+            <li class="list-group-item p-3">
+              <i class="bi bi-person fs-3"></i>&nbsp;&nbsp; &nbsp;personal
+              information
+              <i
+                class="bi bi-chevron-right float-end float-end"
+                style="font-size: 20px"
+              ></i>
+            </li>
+          </div>
+
+          <div>
+            <li class="list-group-item p-3">
+              <i class="bi bi-people fs-3"></i>&nbsp;&nbsp; &nbsp;pessengers
+              <i
+                class="bi bi-chevron-right float-end float-end"
+                style="font-size: 20px"
+              ></i>
+            </li>
+          </div>
+
+          <div>
+            <li class="list-group-item p-3">
+              <img
+                src="assets/img/irctr.svg"
+                alt="irctc"
+                class="img-fluid"
+                style="width: 30px !important"
+              />&nbsp;&nbsp; &nbsp;IRCTC details
+              <i
+                class="bi bi-chevron-right float-end float-end"
+                style="font-size: 20px"
+              ></i>
+            </li>
+          </div>
+        </ul>
+      </div>
+
+      <div class="unorder2 mb-4">
+        <div class="Details mb-4">
+          <h5 class="Details ms-2">payments</h5>
+        </div>
+        <ul class="list-group">
+          <div>
+            <li class="list-group-item p-3">
+              <i class="bi bi-wallet fs-4"></i>&nbsp;&nbsp; &nbsp;bus wallet
+              <i
+                class="bi bi-chevron-right float-end float-end"
+                style="font-size: 20px"
+              ></i>
+            </li>
+          </div>
+
+          <div>
+            <li class="list-group-item p-3">
+              <i class="bi bi-credit-card-2-front fs-3"></i>&nbsp;&nbsp;
+              &nbsp;payment method
+              <i
+                class="bi bi-chevron-right float-end float-end"
+                style="font-size: 20px"
+              ></i>
+            </li>
+          </div>
+
+          <div>
+            <li class="list-group-item p-3">
+              <i class="bi bi-file-text fs-3"></i>&nbsp;&nbsp; &nbsp;GST details
+              <i
+                class="bi bi-chevron-right float-end float-end"
+                style="font-size: 20px"
+              ></i>
+            </li>
+          </div>
+        </ul>
+      </div>
+
+      <div class="unorder3 mb-4">
+        <div class="Details mb-4">
+          <h5 class="Details ms-2">more</h5>
+        </div>
+        <ul class="list-group">
+          <div>
+            <li class="list-group-item p-3">
+              <i class="bi bi-gift fs-4"></i>&nbsp;&nbsp; &nbsp;offers
+              <i
+                class="bi bi-chevron-right float-end float-end"
+                style="font-size: 20px"
+              ></i>
+            </li>
+          </div>
+
+          <div>
+            <li class="list-group-item p-3">
+              <i class="bi bi-reply-all fs-3"></i>&nbsp;&nbsp; &nbsp;referrals
+              <i
+                class="bi bi-chevron-right float-end float-end"
+                style="font-size: 20px"
+              ></i>
+            </li>
+          </div>
+
+          <div>
+            <li class="list-group-item p-3">
+              <i class="bi bi-info-circle fs-3"></i>&nbsp;&nbsp; &nbsp;know
+              about bus
+              <i
+                class="bi bi-chevron-right float-end float-end"
+                style="font-size: 20px"
+              ></i>
+            </li>
+          </div>
+
+          <div>
+            <li class="list-group-item p-3">
+              <i class="bi bi-file-earmark-play fs-3"></i>&nbsp;&nbsp;
+              &nbsp;trending videos
+              <i
+                class="bi bi-chevron-right float-end float-end"
+                style="font-size: 20px"
+              ></i>
+            </li>
+          </div>
+
+          <div>
+            <li class="list-group-item p-3">
+              <i class="bi bi-star fs-3"></i>&nbsp;&nbsp; &nbsp;rate app
+              <i
+                class="bi bi-chevron-right float-end float-end"
+                style="font-size: 20px"
+              ></i>
+            </li>
+          </div>
+
+          <div>
+            <li class="list-group-item p-3">
+              <i class="bi bi-person-check fs-3"></i>&nbsp;&nbsp; &nbsp;account
+              settings
+              <i
+                class="bi bi-chevron-right float-end float-end"
+                style="font-size: 20px"
+              ></i>
+            </li>
+          </div>
+        </ul>
+      </div>
+
+      <div class="unorder4 mb-4">
+        <div class="Details mb-4">
+          <h5 class="Details ms-2">preferences</h5>
+        </div>
+        <ul class="list-group">
+          <div>
+            <li class="list-group-item p-2" style="position: ab">
+              <img
+                src="assets/img/flag.png"
+                alt="flag"
+                class="img-fluid"
+                style="width: 30px !important"
+              />&nbsp;&nbsp; &nbsp;country <br />india
+
+              <i
+                class="bi bi-chevron-right float-end float-end"
+                style="font-size: 20px; margin-top: -13px; margin-right: 8px"
+              ></i>
+            </li>
+          </div>
+
+          <div>
+            <li class="list-group-item p-3">
+              <i class="bi bi-currency-rupee fs-3"></i>&nbsp;&nbsp;
+              &nbsp;currency
+              <i
+                class="bi bi-chevron-right float-end float-end"
+                style="font-size: 20px"
+              ></i>
+            </li>
+          </div>
+
+          <div>
+            <li class="list-group-item p-3">
+              <i class="bi bi-translate fs-3"></i>&nbsp;&nbsp; &nbsp;languages
+
+              <i
+                class="bi bi-chevron-right float-end float-end"
+                style="font-size: 20px"
+              ></i>
+            </li>
+          </div>
+
+          <div>
+            <li class="list-group-item p-3">
+              <i class="bi bi-palette fs-3"></i>&nbsp;&nbsp; &nbsp;app theme
+              <i
+                class="bi bi-chevron-right float-end float-end"
+                style="font-size: 20px"
+              ></i>
+            </li>
+          </div>
+
+          <div>
+            <li class="list-group-item p-3">
+              <i class="bi bi-bell"></i>&nbsp;&nbsp; &nbsp;notifications
+              <i
+                class="bi bi-chevron-right float-end float-end"
+                style="font-size: 20px"
+              ></i>
+            </li>
+          </div>
+
+          <div>
+            <li class="list-group-item p-3">
+              <img
+                src="assets/img/woman.png"
+                alt="women"
+                class="img-fluid"
+                style="width: 30px !important"
+              />&nbsp;&nbsp; &nbsp;booking for women
+              <i
+                class="bi bi-chevron-right float-end float-end"
+                style="font-size: 20px"
+              ></i>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+<br /><br />
+<app-footer></app-footer>

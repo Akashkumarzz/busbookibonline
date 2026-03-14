@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bus Booking</title>
+  </head>
+  <app-navbar *ngIf="navbar" class="fixed-top"></app-navbar>
+  <body>
+    <!-- Parent 1 -->
+    <div class="parent p-0 text-center w-100" *ngIf="parent" id="boxShadow">
+      <div class="div">
+        <h3 class="ms-2 fw-bold" style="margin-top: 80px">Bus Tickets</h3>
+        <!--inputs-->
+        <div class="fullContainer">
+          <div class="container" *ngIf="hideContainer">
+            <div class="p-3 m-3 border border-2 border-secondary rounded-5">
+              <div class="input-group mb-1 p-1" style="margin-top: 10px">
+                <span class="input-group-text"
+                  ><i class="bi bi-bus-front">&nbsp;</i></span
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder=" From"
+                  [(ngModel)]="SearchInput1"
+                  (click)="inputClick(); getList()"
+                  autofocus
+                />
+              </div>
+
+              <!--upAndDownArrow -->
+              <div class="UpandDownArrow d-flex justify-content-end">
+                <a
+                  href="#"
+                  style="color: #0b0b0b; display: inline-block"
+                  id="one"
+                  (click)="rotation = rotation + 180; swap()"
+                  [style.transform]="'rotateX(' + rotation + 'deg)'"
+                  [style.transition]="'transform 0.5s ease'"
+                >
+                  <i class="bi bi-arrow-up"></i>
+
+                  <i class="bi bi-arrow-down" style="margin-left: -5px"></i>
+                </a>
+              </div>
+              <!--upAndDownArrow END -->
+
+              <div class="input-group mb-3 p-1">
+                <span class="input-group-text"
+                  ><i class="bi bi-bus-front">&nbsp;</i></span
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="To"
+                  [(ngModel)]="SearchInput2"
+                  (click)="inputClick(); getList()"
+                />
+              </div>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text"
+                  ><i class="bi bi-calendar-minus-fill"></i
+                ></span>
+                <input type="date" class="form-control" />
+              </div>
+
+              <!-- Searcb Bus Button -->
+              <div class="button text-center">
+                <button class="btn btn-primary w-100" (click)="AlrtoChe()">
+                  <i class="bi bi-search"></i>
+                  &nbsp;Search Bus
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--inputs END -->
+      </div>
+    </div>
+
+    <!-- Parent-2 -->
+    <div
+      *ngIf="parent2"
+      class="perent2 border border-secondary border-2 border-end p-3 m-4 rounded-5 d-flex align-items-center"
+    >
+      <div class="img ms-1">
+        <div class="img" style="position: relative">
+          <img
+            src="assets/img/woman.png"
+            alt="women"
+            class="img-fluid ms-2"
+            style="width: 25px"
+          />&nbsp;Booking for Women
+
+          <div class="darkbtn" style="position: absolute">
+            <div class="checkbox-con">
+              <input
+                id="checkbox"
+                type="checkbox"
+                style="left: 240px; bottom: 35px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Parent-3 -->
+    <div *ngIf="parent3">
+      <!-- chatgpt-->
+      <div class="container my-5">
+        <!-- Welcome Banner -->
+        <div class="text-center mb-5">
+          <h1 class="fw-bold">Welcome to Our Booking Portal</h1>
+          <p class="lead text-muted">
+            Fast, secure, and easy travel reservations at your fingertips.
+          </p>
+          <a
+            href="#"
+            (click)="inputClick(); getList()"
+            class="btn btn-primary btn-lg mt-3"
+            >Book Now</a
+          >
+        </div>
+
+        <!-- Chatgpt -->
+        <div class="row text-center">
+          <div class="col-md-6 mb-4">
+            <img
+              src="assets/img/bushome3.avif"
+              alt="Easy Booking"
+              class="img-fluid mb-3 w-100 rounded-5 img-thumbnail"
+            />
+            <h5 class="fw-semibold">Easy Booking</h5>
+            <p class="text-muted">
+              Book your seats in just a few clicks with our user-friendly
+              platform.
+            </p>
+          </div>
+          <div class="col-md-6 mb-4">
+            <img
+              src="assets/img/bushome4.jpg"
+              alt="Support"
+              class="img-fluid mb-3 w-100 rounded-5 img-thumbnail"
+            />
+            <h5 class="fw-semibold">24/7 Support</h5>
+            <p class="text-muted">
+              Need help? Our support team is here for you anytime, anywhere.
+            </p>
+          </div>
+        </div>
+
+        <!-- chatgpt-->
+        <div class="text-center mt-5">
+          <h2 class="fw-bold">Why People Love Us</h2>
+          <p class="text-muted mb-4">
+            Trusted by thousands of happy customers across the country.
+          </p>
+          <blockquote class="blockquote">
+            <p>
+              "This platform made my travel planning so easy. I never miss a
+              seat now!"
+            </p>
+            <footer class="blockquote-footer">A Happy Traveler</footer>
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- chatgpt-->
+      <div class="container my-5 text-center">
+        <h3 class="fw-bold mb-4">Popular Destinations</h3>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Chennai → Banglore</h5>
+                <p class="card-text text-muted">From &#8377;1500 • 9h 30m</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Erode → Banglore</h5>
+                <p class="card-text text-muted">From &#8377;1800 • 11h 15m</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Chennai → Trichy</h5>
+                <p class="card-text text-muted">From &#8377; 2000 • 6h</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Ariyalur → Trichy</h5>
+                <p class="card-text text-muted">From &#8377;120 • 2h</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- chatgpt-->
+      <div class="bg-primary text-white text-center m-4 rounded-2 p-3 shadow">
+        <h2 class="fw-bold mb-3">Plan Ahead. Book Your Ride Today!</h2>
+        <p class="mb-4">
+          Get the best deals and guaranteed seats with our early booking system.
+        </p>
+        <a href="#" routerLink="/account" class="btn btn-light btn-lg"
+          >Check Offers</a
+        >
+      </div>
+
+      <!-- chatgpt-->
+      <!-- Newsletter -->
+      <section class="text-center py-5 bg-light">
+        <div class="container">
+          <h3 class="fw-bold">Stay in the Loop</h3>
+          <p>Subscribe for deals & discounts</p>
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              <div class="input-group input-group-lg">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Your email"
+                />
+                <button class="btn btn-primary">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-secondary text-white text-center py-3">
+        <div class="container">
+          <p class="mb-0">© 2025 ExploreNow. Powered by Bus</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- List -->
+    <div *ngIf="list" class="list vw-100 vh-100">
+      <nav
+        class="navbar navbar-dark bg-primary p-1 fixed-top top-0 start-0 w-100"
+      >
+        <a
+          href="#"
+          routerLink="./home"
+          (click)="backBtn()"
+          style="color: white"
+        >
+          <i class="bi bi-arrow-left ms-1" style="font-size: 25px"> </i
+        ></a>
+      </nav>
+
+      <ul class="list-group" style="margin-top: 8px">
+        <li
+          *ngFor="let item of city"
+          (click)="selectCity(item); listClick()"
+          class="list-group-item list-group-item-action d-flex align-items-center"
+          style="color: black"
+        >
+          <a href="#" style="text-decoration: none; color: inherit">
+            {{ item }}
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!--Bus Zoom-->
+    <div
+      *ngIf="initialComp"
+      class="container-fluid p-0 m-0 vh-100 d-flex justify-content-center align-items-center bg-primary"
+    >
+      <app-initial class="w-100 h-100"></app-initial>
+    </div>
+    <!--Bus Zoom End-->
+  </body>
+
+  <br />
+  <br />
+  <br />
+
+  <!-- Footer -->
+
+  <div class="footers" *ngIf="footer">
+    <app-footer></app-footer>
+  </div>
+</html>

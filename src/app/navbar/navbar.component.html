@@ -1,0 +1,110 @@
+<style>
+  ul li {
+    cursor: pointer;
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .absolute {
+    position: absolute;
+    top: 26px;
+  }
+
+  .shine-wrapper {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  .shine-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.744) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    animation: shine-move 2s infinite;
+    pointer-events: none;
+  }
+
+  @keyframes shine-move {
+    0% {
+      left: -75%;
+    }
+    100% {
+      left: 125%;
+    }
+  }
+</style>
+
+<nav class="navbar bg-light">
+  <ul
+    class="d-flex justify-content-between align-items-center list-unstyled m-0 w-100 px-1"
+  >
+    <div class="relative">
+      <li class="relative">
+        <div class="shine-wrapper">
+          <img
+            src="assets/img/train.png"
+            alt="train"
+            style="width: 40px; height: 40px"
+          />
+        </div>
+        <div class="absolute">
+          <span class="badge text-bg-success" style="font-size: 9px"
+            >Prime</span
+          >
+        </div>
+      </li>
+
+      <div class="absolute">
+        <span class="badge text-bg-success" style="font-size: 9px">Prime</span>
+      </div>
+    </div>
+    <li>
+      <img
+        src="assets/img/plane.png"
+        alt="plane"
+        style="width: 40px; height: 40px"
+      />
+    </li>
+
+    <li>
+      <img
+        src="assets/img/bus.png"
+        alt="bus"
+        style="width: 40px; height: 40px"
+      />
+    </li>
+
+    <li>
+      <img
+        src="assets/img/car.png"
+        alt="car"
+        style="width: 40px; height: 40px"
+      />
+    </li>
+    <li>
+      <img
+        src="assets/img/bycicle.png"
+        alt="bike"
+        style="width: 40px; height: 40px"
+      />
+    </li>
+    <li>
+      <img
+        src="assets/img/rickshaw.png"
+        alt="auto"
+        style="width: 40px; height: 40px"
+      />
+    </li>
+  </ul>
+</nav>
